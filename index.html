@@ -22,6 +22,36 @@
 					crafted by <a href="http://html5up.net">HTML5 UP</a>.</h1>
 				</div>
 			</header>
+		<p>Here you will find information about my three facets as a Big 4 consultant, an autonomous vehicle enthusiast, and a model.</p>
+
+    <div id="profile-picture">
+      <img src="" alt="Profile Picture">
+      <div id="facet-1" class="facet">
+        <a href="big4.html"></a>
+      </div>
+      <div id="facet-2" class="facet">
+        <a href="av.html"></a>
+      </div>
+      <div id="facet-3" class="facet">
+        <a href="model.html"></a>
+      </div>
+    </div>
+
+    <form id="upload-form">
+      <input type="file" id="profile-picture-upload">
+      <input type="submit" value="Upload">
+    </form>
+
+    <script>
+      const form = document.querySelector("#upload-form");
+      form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const input = document.querySelector("#profile-picture-upload");
+        const image = document.querySelector("#profile-picture img");
+        image.src = URL.createObjectURL(input.files[0]);
+      });
+    </script>
 
 		<!-- Main -->
 			<div id="main">
